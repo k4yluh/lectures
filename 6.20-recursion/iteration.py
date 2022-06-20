@@ -1,3 +1,4 @@
+# To find the largest element in a list by "iterating over" its elements:
 def max_element(lst):
     temp = None
     for element in lst:
