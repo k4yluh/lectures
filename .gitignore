@@ -1,0 +1,16 @@
+.DS_Store
+*.swp
+*.icloud
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+*.texe
+*.cpt
+*.pyc
+__pycache__
+.mypy_cache
+.coverage
