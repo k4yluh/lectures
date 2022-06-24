@@ -4,6 +4,8 @@ import sys
 def fibonacci(n):
     current = previous = None
 
+    # NOTE: This loop runs n times; this iterative function has
+    #       complexity O(n).
     for i in range(n + 1):
         if i == 0:
             current = 0
