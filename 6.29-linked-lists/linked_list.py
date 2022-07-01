@@ -18,11 +18,21 @@ class Node:
         self.next = next
 
 
-def get():
+def get(lst, idx):
+    # Set a current node reference to the head.
+    # Set a counter to 0.
+    # For counter from 0 to idx, do:
+    #     Set the current node to the current node's next.
+    # Return the current node's value.
     pass
 
 
-def set():
+def set(lst, idx, value):
+    # Set a current node reference to the head.
+    # Set a counter to 0.
+    # For counter from 0 to idx, do:
+    #     Set the current node to the current node's next.
+    # Set the current node's value to the given value. 
     pass
 
 
@@ -46,7 +56,8 @@ def add(lst, idx, value):
     pass
 
 
-def remove():
+def remove(lst, idx):
+    # ...
     # Else if removing from the middle of a non-empty list:
     #     Find the node *before* the desired index
     #     Get the previous node's next's next -- this is just the node *after*
