@@ -3,6 +3,7 @@ class SortedList:
 
     # NOTE: The list must be sorted in order to perform a binary search, else
     #       comparing the middle element eliminates only the middle element.
+
     # NOTE: The list must be backed by an array, so that it can support fast
     #       random access. With a linked list, comparing the midpoint instead
     #       of the first element saves no time, because simply getting to the
@@ -27,9 +28,11 @@ def find(lst, value):
     # While low <= high:
     #     Set mid to (low + high) // 2.
     #     If array[mid] < value:
+    #         NOTE: Could also recurse on a smaller list.
     #         Set low to mid + 1.
     #     Else if array[mid] > value:
-    #         Set high to mid - 1. 
+    #         NOTE: Could also recurse on a smaller list.
+    #         Set high to mid - 1.
     #     Else:
     #         Return mid
     # Return None
