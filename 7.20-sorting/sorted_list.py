@@ -45,15 +45,15 @@ def insert(lst, value):
     # Return.
 
 
-def create(lst):
-    # NOTE: The best-case scenario is that the list is already sorted, and
+def create(array):
+    # NOTE: The best-case scenario is that the array is already sorted, and
     #       each element is thus larger than any prior: O(n)
-    #       The worst-case scenario is that the list sorted in reverse, and
+    #       The worst-case scenario is that the array is sorted in reverse, and
     #       each element is thus smaller than any prior: O(n^2)
     #       The average-case scenario is that each element is roughly the
     #       median of those prior: n * n/2 = O(n^2)
 
     # Make a new sorted list.
-    # For every element in the list:
+    # For every element in the array:
     #     Insert the element into the sorted list.
     # Return the sorted list.
