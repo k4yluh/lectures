@@ -50,8 +50,29 @@ def preorder(tree):
 
 
 def postorder(tree):
+    # NOTE: Any recursive function can be made iterative by maintaining a
+    #       "stack of jobs". Calling the function is pushing its job;
+    #       returning is popping a job; the functions are all done once the
+    #       stack is empty (there are no more jobs).
+
+    # Create an empty stack and push (root, yes).
+    # While the stack is not empty:
+    #     Pop (current, children?) off of the stack.
+    #     If children? and the current node actually has children:
+    #         Push (current, no).
+    #         Push (right, yes) and (left, yes).
+    #     Else:
+    #         Mark the current node as explored.
+    # Return.
     pass
 
 
 def levelorder(tree):
+    # Create an empty queue and enqueue the root.
+    # While the queue is not empty:
+    #     Dequeue the current node from the queue.
+    #     Mark the current node as explored.
+    #     If the current node has children:
+    #         Enqueue the children.
+    # Return.
     pass
