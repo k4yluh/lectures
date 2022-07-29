@@ -21,10 +21,38 @@ class Node:
 
 
 def find(bst, key):
+    # NOTE: All BSTs are binary trees, and are therefore recursive:
+    #         * The smallest BSTs have 0 or 1 nodes.
+    #         * All larger BSTs have a root node and 1 or 2 smaller subtrees.
+    #       ...BST operations can be performed recursively.
+
+    # If the tree is empty, then:
+    #     Bad job! :(
+    # Else if the root's key equals the given key, then:
+    #     Good job! :)
+    # Else if the root's key is too large, then:
+    #     Recurse on the left subtree.
+    # Else, do:
+    #     Recurse on the right subtree.
     pass
 
 
 def insert(bst, key):
+    # If the tree is empty, then:
+    #     Make a new node to contain the given key.
+    #     Set the tree's root to the new node.
+    #     Increment the size.
+    # Else if the root's key equals the given key, then:
+    #     Good job! :)
+    # Else if the root's key is too large, then:
+    #     Recurse on the left subtree.
+    #     NOTE: We have now inserted the key into the left subtree, and we
+    #           have returned to the parent of that left subtree.
+    #     Set the root's left child to the root of resulting left subtree.
+    # Else, do:
+    #     Recurse on the right subtree.
+    #     Set the root's right child to the root of resulting right subtree.
+    # (return the tree?)
     pass
 
 
