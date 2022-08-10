@@ -10,29 +10,54 @@ class Dictionary:
         self.size = 0
 
 
+class Node:
+    """ A single node in a linked list """
+
+    def __init__(self, key, value, next):
+        # The key contained in this node:
+        self.key = key
+        # The value contained in this node:
+        self.value = value
+        # The next node in the linked list:
+        self.next = next
+
+
 def get(dct, key):
     # Hash the given key and mod it by the capacity.
-    # Return the element in the array at that hash code.
+    # Start with the current node being the head at that hash code.
+    # While the current node's key is not the given key, do:
+    #     Set the current node to the current node's next.
+    # Return the current node's value.
     pass
 
 
 def insert(dct, key, value):
-    # NOTE: This only works as long as every key is guaranteed to perfectly
-    #       hash to its own unique index -- which, in general, is not a safe
-    #       assumption. Essentially, each array location needs to be able to
-    #       contain more than one value, should their keys hash to the same
-    #       index...
-
     # Hash the given key and mod it by the capacity.
-    # If the element in the array at that hash code is None, then:
+    # If the head at that hash code is None, then:
+    #     Create a new node containing the given key-value pair.
+    #     Set the head at that hash code to the new node.
     #     Increment the size.
-    # Set the element in the array at that hash code to the given value.
+    # Else, do:
+    #     Start with the current node being the head at that hash code.
+    #     While the current node's key is not the given key, do:
+    #         If the current node's next is None, then:
+    #             Create a new node containing the given key-value pair.
+    #             Set the current node's next to the new node.
+    #             Increment the size.
+    #         Set the current node to the current node's next.
+    #     Set the current node's value to the given value.
     pass
 
 
 def remove(dct, key):
     # Hash the given key and mod it by the capacity.
-    # Set the element in the array at that hash code to None.
+    # If the head at that hash code contains the given key, then:
+    #     Set the head at that hash code to the head's next.
+    # Else, do:
+    #     Start with the current node being the head at that hash code.
+    #     While the next node's key is not the given key, do:
+    #         Set the current node to the current node's next.
+    #     Set the current node's next to the current node's next's next.
     # Decrement the size.
     # Return the removed value.
     pass
